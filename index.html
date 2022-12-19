@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Game DB</title>
+</head>
+
+<body>
+    <section class="main-container">
+        <section class="top-section">
+            <section class="score" id="red-score">0</section>
+            <section class="score" id="green-score">11</section>
+        </section>
+        <section class="middle-section">
+            <section class="top-middle">
+                <section id="playing-info">
+                    <span>PLAYING UNTIL:</span>
+                </section>
+                <section id="dropdown">
+                    <select name="numbers" id="choose-num" onchange="getValue()">
+                        <option class="nums" id="first" value="1">1</option>
+                        <option class="nums" id="two" value="2">2</option>
+                        <option class="nums" id="three" value="3">3</option>
+                        <option class="nums" id="four" value="4">4</option>
+                        <option class="nums" id="five" value="5">5</option>
+                        <option class="nums" id="six" value="6">6</option>
+                        <option class="nums" id="seven" value="7">7</option>
+                        <option class="nums" id="eight" value="8">8</option>
+                        <option class="nums" id="nine" value="9">9</option>
+                        <option class="nums" id="ten" value="10">10</option>
+                        <option class="nums" id="eleven" value="11">11</option>
+                    </select>
+                </section>
+            </section>
+        </section>
+        <section class="lower-mid-section">
+
+            <section id="inc-player-one">
+                <span id="a">Increment Player 1</span>
+            </section>
+            <section id="inc-player-two">
+                <span id="b">Increment Player 2</span>
+
+            </section>
+        </section>
+
+        <section id="reset">
+            <input type="reset" value="Reset">
+        </section>
+    </section>
+
+</body>
+<script src="main.js"></script>
+
+</html>
