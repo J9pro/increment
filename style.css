@@ -125,13 +125,26 @@ body {
     justify-content: center;
 }
 
+button {
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    width: 109px;
+    margin-top: -1.1rem;
+    margin-left: -0.9rem;
+}
+
+button:hover {
+    text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+
+}
 
 #inc-player-one,
 #inc-player-two {
     border: none;
     color: white;
     border-radius: 5px;
-    width: 100px;
+    width: 80px;
     height: 30px;
     padding: 5px 20px;
     margin-left: 20px;
@@ -162,6 +175,7 @@ body {
     text-shadow: 0 0 10px #ff6600, 0 0 40px #ff6600, 0 0 80px #ff6600;
     background-color: transparent;
     border: 1px solid #ff6600;
+
 
 }
 
