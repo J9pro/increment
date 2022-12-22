@@ -11,7 +11,6 @@ body {
 }
 
 .main-container {
-
     width: 300px;
     height: 300px;
     border-radius: 5px;
@@ -19,8 +18,8 @@ body {
 
 }
 
-#red-score,
-#green-score {
+#left-score,
+#right-score {
     display: flex;
     justify-content: center;
     border: 2px solid #fff;
@@ -34,11 +33,11 @@ body {
 
 }
 
-#red-score {
+#left-score {
     color: white;
 }
 
-#green-score {
+#right-score {
     color: white;
 }
 
@@ -159,7 +158,6 @@ button:hover {
 }
 
 #inc-player-one {
-    /* background: linear-gradient(90deg, #f441a5, #ffeb3b); */
     text-shadow: 0 0 10px #16F5BD, 0 0 40px #16F5BD, 0 0 80px #16F5BD;
     background-color: transparent;
     border: 1px solid #16F5BD;
@@ -171,7 +169,6 @@ button:hover {
 }
 
 #inc-player-two {
-    /* background: linear-gradient(90deg, #f5ce62, #03a9f4); */
     text-shadow: 0 0 10px #ff6600, 0 0 40px #ff6600, 0 0 80px #ff6600;
     background-color: transparent;
     border: 1px solid #ff6600;

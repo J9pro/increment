@@ -12,17 +12,18 @@
 <body>
     <section class="main-container">
         <section class="top-section">
-            <section class="score" id="red-score">0</section>
-            <section class="score" id="green-score">0</section>
+            <section class="score" id="left-score">0</section>
+            <section class="score" id="right-score">0</section>
         </section>
+
         <section class="middle-section">
             <section class="top-middle">
                 <section id="playing-info">
                     <span>PLAYING UNTIL:</span>
                 </section>
+
                 <section id="dropdown">
                     <select name="numbers" id="choose-num">
-                        <!-- onchange="getValue()" -->
                         <option class="nums" value="1">1</option>
                         <option class="nums" value="2">2</option>
                         <option class="nums" value="3">3</option>
@@ -39,20 +40,19 @@
             </section>
         </section>
         <section class="lower-mid-section">
-
             <section id="inc-player-one">
-                <button id="a">
+                <button id="p-one">
                     <span>Increment Player 1</span>
                 </button>
-
             </section>
+
             <section id="inc-player-two">
-                <button id="b">
+                <button id="p-two">
                     <span>Increment Player 2</span>
                 </button>
             </section>
         </section>
-
+        <!-- footer -->
         <section id="reset">
             <input type="reset" value="Reset">
         </section>

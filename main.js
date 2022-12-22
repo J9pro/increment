@@ -1,96 +1,70 @@
-const score = document.querySelector('.score');
+const score = document.querySelectorAll('.score');
 const resetBtn = document.querySelector("#reset");
 const choose = document.getElementById("choose-num");
-const player1Btn = document.querySelector("#a");
-const player2Btn = document.querySelector("#b")
-
+const player1Btn = document.querySelector("#p-one");
+const player2Btn = document.querySelector("#p-two");
+const result1 = document.getElementById("left-score");
+const result2 = document.getElementById("right-score");
+let start1 = 0;
+let start2 = 0;
 
 //GET VALUE FROM DROPDOWN & SET VALUE IN SCORE-BOARD
 choose.addEventListener('change', function () {
-    // Number(choose.options[choose.selectedIndex].value);
-    choose.value
-    score.innerHTML = "0";
-    score.style.color = "white";
-    document.querySelector("#green-score").style.color = "white";
-    document.querySelector("#green-score").innerHTML = "0";
-    startG = 0
-    start = 0
-    // clearedBtn();
+    for (let scoring of score) {
+        scoring.textContent = 0;
+        scoring.style.color = "white";
+    }
+    start2 = 0;
+    start1 = 0;
+    player1Btn.removeAttribute('disabled', '');
+    player2Btn.removeAttribute('disabled', '');
 });
 
 
-let start = 0;
-const resultR = document.getElementById("red-score");
 player1Btn.addEventListener("click", () => {
-    start++;
-    Number(resultR.innerHTML = start);
-    if (Number(start) == choose.value) {
-        resultR.style.color = "limegreen";
-        console.log("YOU WIN!!")
-        start = 0;
-        startG = 0;
-        result.style.color = "red";
-
-    } else if (Number(start) < choose.value) {
-        resultR.style.color = "white";
+    start1++;
+    Number(result1.textContent = start1);
+    if (Number(start1) == choose.value) { //they win!
+        result1.style.color = "limegreen";
+        result2.style.color = "red";
+        player1Btn.setAttribute('disabled', '');
+        player2Btn.setAttribute('disabled', '');
+        start1 = 0;
+        start2 = 0;
+    } else {
 
     }
-    //  else {
-    //     resultR.style.color = "red";
-    // }
+
+
 });
 
-let startG = 0;
-const result = document.getElementById("green-score");
 player2Btn.addEventListener("click", () => {
-    startG++;
-    Number(result.innerHTML = startG);
-    if (Number(startG) == choose.value) {
-        console.log("hello world")
-        result.style.color = "limegreen";
-        startG = 0;
-        start = 0;
-        resultR.style.color = "red";
-    } else if (Number(startG) < choose.value) {
-        //console.log("sorry")
-        result.style.color = "white";
+    start2++;
+    Number(result2.textContent = start2);
+    if (Number(start2) == choose.value) { // they win!!
+        result2.style.color = "limegreen";
+        result1.style.color = "red";
+        player1Btn.setAttribute('disabled', '');
+        player2Btn.setAttribute('disabled', '');
+        start2 = 0;
+        start1 = 0;
+
+    } else {
 
     }
-    // else {
-    //     //console.log("sorry")
-    //     result.style.color = "red";
-
-    // }
 
 });
-
 
 
 //RESET BUTTON
 resetBtn.addEventListener("click", function () {
     // clears every cell
-    for (let i = 0; i <= 11; i++) {
-        // i.innerHTML = "";
-        score.innerHTML = "0";
-        score.style.color = "white";
-        document.querySelector("#green-score").style.color = "white";
-        document.querySelector("#green-score").innerHTML = "0";
-        startG = 0
-        start = 0
-
-
+    for (let scoring of score) {
+        scoring.textContent = 0;
+        scoring.style.color = "white";
     }
-
+    start2 = 0;
+    start1 = 0;
+    player1Btn.removeAttribute('disabled', '');
+    player2Btn.removeAttribute('disabled', '');
 });
-
-////////////////////////
-//THINGS THE GAME NEEDS
-////////////////////////
-
-//when player wins- you should not be able to continue incrementing
-
-//whenever you change the selected target- everything should reset.
-
-//clean up IDs in html
-
-//increase the width of button's size
