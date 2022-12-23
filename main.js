@@ -16,8 +16,8 @@ choose.addEventListener('change', function () {
     }
     start2 = 0;
     start1 = 0;
-    player1Btn.removeAttribute('disabled', '');
-    player2Btn.removeAttribute('disabled', '');
+    player1Btn.removeAttribute('disabled');
+    player2Btn.removeAttribute('disabled');
 });
 
 
@@ -65,6 +65,6 @@ resetBtn.addEventListener("click", function () {
     }
     start2 = 0;
     start1 = 0;
-    player1Btn.removeAttribute('disabled', '');
-    player2Btn.removeAttribute('disabled', '');
+    player1Btn.removeAttribute('disabled');
+    player2Btn.removeAttribute('disabled');
 });
